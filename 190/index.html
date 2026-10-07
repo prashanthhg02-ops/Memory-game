@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f6f2">
+    <meta name="description" content="A cozy little memory matching game.">
+    <title>Little Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Little Memory Game home">
+          <span class="brand-mark" aria-hidden="true">✳</span>
+          <span>little games club</span>
+        </a>
+        <span class="top-note">A little pause for your brain</span>
+      </header>
+
+      <section class="game" aria-labelledby="game-title">
+        <div class="intro">
+          <p class="eyebrow">PLAY AT YOUR OWN PACE</p>
+          <h1 id="game-title">Memory match<span class="title-dot">.</span></h1>
+          <p class="instructions">Find all 8 matching pairs. Take a breath, flip a card, and see what sticks.</p>
+        </div>
+
+        <div class="scorebar" aria-label="Game statistics">
+          <div class="stat">
+            <span class="stat-label">MOVES</span>
+            <span class="stat-value" id="moves">00</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">TIME</span>
+            <span class="stat-value" id="timer">00:00</span>
+          </div>
+          <button class="restart" id="restart" type="button">
+            <span aria-hidden="true">↻</span> New game
+          </button>
+        </div>
+
+        <div class="board" id="board" aria-label="Memory card game board"></div>
+        <p class="game-message" id="message" role="status" aria-live="polite">Your first card is waiting ✨</p>
+      </section>
+
+      <footer class="footer">
+        <span>Made for curious minds</span>
+        <span class="footer-sparkle" aria-hidden="true">✦</span>
+        <span>One pair at a time</span>
+      </footer>
+    </main>
+  </body>
+</html>
